@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { Recipe } from '../recipe';
 
 @Component({
@@ -12,9 +12,14 @@ export class RecipeListComponent implements OnInit {
     {name: 'The Same Gnocchi Bake', description: "An Italian Classic", imagePath: "https://www.bbcgoodfood.com/sites/default/files/recipe-collections/collection-image/2013/05/chorizo-mozarella-gnocchi-bake-cropped.jpg"}
   ];
 
+  @Output() clickRecipe: EventEmitter<Recipe> = new EventEmitter();
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  onClickRecipe(recipe) {
+    this.clickRecipe.emit(recipe);
+  }
 }
