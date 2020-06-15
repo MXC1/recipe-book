@@ -16,8 +16,6 @@ export class RecipesComponent implements OnInit {
   }
 
   onClickRecipe(recipe) {
-    console.log(recipe);
-    
     this.recipe = recipe;
   }
 
