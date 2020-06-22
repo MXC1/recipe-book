@@ -2,8 +2,10 @@
     <div class="row">
         <div class="col-md-12">
             <app-header (currentPage)="onChangePage($event)"></app-header>
-            <app-recipes *ngIf="currentPage == 'recipes'"></app-recipes>
-            <app-shopping-list *ngIf="currentPage == 'shoppinglist'"></app-shopping-list>
+            <!-- <app-recipes *ngIf="currentPage == 'recipes'"></app-recipes>
+            <app-shopping-list *ngIf="currentPage == 'shoppinglist'"></app-shopping-list> -->
+            
+            <router-outlet></router-outlet>
         </div>
     </div>
 </div>
